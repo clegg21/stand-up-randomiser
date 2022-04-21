@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
-}
+@import url(//fonts.googleapis.com/css?family=Graduate);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  display: grid;
+  grid-template-rows: 70px 450px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    ". title. "
+    "questions attendees speaker";
+  border-radius: 15px;
+  margin: 20px;
+  background-color: #052643;
+  color: #fff;
+  font-family: "Graduate";
+  width: 1200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+  grid-area: title;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  text-decoration: underline;
+  color: #1ed560;
+}
+
+.questions {
+  grid-area: questions;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.attendees {
+  grid-area: attendees;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.speaker {
+  grid-area: speaker;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 30px;
+}
+
+li {
+  padding: 30px 0;
+  font-size: 32px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+p {
+  margin: 5px 0;
 }
